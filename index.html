@@ -1,0 +1,481 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head profile="http://gmpg.org/xfn/11">
+<title>首页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="stylesheet" href="styles/layout.css" type="text/css" />
+<!-- Homepage Specific Elements -->
+<script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.tabs.setup.js"></script>
+<script type="text/javascript" src="scripts/slideDown.js"></script>
+<!-- End Homepage Specific Elements -->
+<style>
+/*carousel.css*/
+	#carousel {
+		position: relative;
+		width: 100%;
+		height:100%;
+		margin: 0 auto;
+	}
+	#carousel input[type='radio'] {
+		position: absolute;
+		bottom: -35px;
+		z-index: 120;
+		width: 15px;
+		height: 15px;
+		margin: 0px;
+		opacity: 0.5;
+		cursor: pointer;
+		-webkit-transition: opacity 0.5s ease ;
+		-moz-transition: opacity 0.5s ease ;
+		-ms-transition: opacity 0.5s ease ;
+		-o-transition: opacity 0.5s ease ;
+		transition: opacity 0.5s ease ;
+	}
+	
+	#carousel input[type='radio']:hover {
+		opacity: 1;
+
+	}
+	#carousel input[type='radio']:checked {
+		opacity: 1;
+	}
+	/*触发选中的input紧接着后面的a的样式*/
+	#carousel input[type='radio']:checked + a {
+		z-index: 110;
+		opacity: 1;
+	}
+	#carousel input[type='radio']:after {
+		content: '';
+		display: block;
+		height: 15px;
+		background-size:cover;
+	}
+	#carousel input[type='radio']:nth-of-type(1){
+		left:30%; 
+	}
+	#carousel input[type='radio']:nth-of-type(1):after {
+		/*background-image: url("images/1.jpg");*/
+	}
+	#carousel input[type='radio']:nth-of-type(2) {
+		left: 40%;
+	}
+	#carousel input[type='radio']:nth-of-type(2):after {
+		/*background-image: url("images/2.jpg");*/
+	}
+	#carousel input[type='radio']:nth-of-type(3) {
+		left: 50%;
+	}
+	#carousel input[type='radio']:nth-of-type(3):after {
+		/*background-image: url("images/3.jpg");*/
+	}
+	#carousel input[type='radio']:nth-of-type(4) {
+		left: 60%;
+	}
+	#carousel input[type='radio']:nth-of-type(4):after {
+		/*background-image: url("images/4.jpg");*/
+	}
+	#carousel input[type='radio']:nth-of-type(5) {
+		left: 70%;
+
+	}
+	#carousel input[type='radio']:nth-of-type(5):after {
+		/*background-image: url("images/5.jpg");*/
+	}
+	#carousel a {
+		position: absolute;
+		width: 100%;
+		top:0;
+		z-index: 99;
+	        -webkit-transition: opacity 1s ease-in-out ;
+		-moz-transition: opacity 1s ease-in-out ;
+		-ms-transition: opacity 1s ease-in-out ;
+		-o-transition: opacity 1s ease-in-out ;
+		transition: opacity 1s ease-in-out;
+		opacity: 0;
+		height: 100%;
+	}
+	#carousel a img {
+		max-width: 100%;
+	}
+	#carousel div {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+	#carousel div img {
+		width: 20%;
+		float: left;
+		opacity: 0.5;
+		-webkit-transition: opacity 1s ease-in-out ;
+		-moz-transition: opacity 1s ease-in-out ;
+		-ms-transition: opacity 1s ease-in-out ;
+		-o-transition: opacity 1s ease-in-out ;
+		transition: opacity 1s ease-in-out;
+	}
+
+	#carousel img.fs-opacity-none {
+		opacity: 1;
+
+	}
+	/*公告信息部分css*/
+	.news_list {list-style: none;padding: 0;margin:0;}
+    .news_list li.news { line-height:24px;padding-left:0px; } /**标题图标**/
+    .news_list li.news span.news_title { float:left;}
+    .news_list li.news span.news_meta { float:right; margin-left:2px;}
+    .news_list li.news p {clear:both; line-height:20px;}
+    .news_list li.news p a { }
+    .news_list li.news p a:hover { text-decoration:underline;}
+    .zdy-tj li {
+	    padding: 22px 0;
+	    border-bottom: 1px solid #C1B394;
+	}
+	.new_list_div{
+		padding: 0px 10px;
+	    padding-bottom: 30px;
+	    padding-top: 10px;
+	    background-color: #e0d9c9;
+	    margin: 0 auto;
+	    border-top: 3px solid #63065f;
+	}
+	.sj {
+	    width: 61px;
+	    height: 60px;
+	    float: left;
+	    text-align: center;
+    /* margin-top: 8px; */
+    }
+    .sj .date-day {
+	    font-size: 20px;
+	    color: #fff;
+	    height: 32px;
+	    line-height: 32px;
+	    background-color: #63065f;
+	}
+	.sj .date-month {
+	    /* height: 30px; */
+	    line-height: 30px;
+	    color: #797979;
+	    background-color: #fff;
+	}
+    .zdy-1 {
+	    width: 350px;
+	    float: right;
+	}
+	.zdy-1 .bt {
+        line-height: 22px;
+    }
+    .clearfix:after {
+	    clear: both;
+	    content: ".";
+	    display: block;
+	    height: 0;
+	    visibility: hidden;
+	}
+	#container .zdy-1 .bt a {
+	    color: #63065f;
+	    font-size: 15px;
+	    background-color: inherit;
+	}
+</style>
+
+</head>
+<body id="top">
+<div class="wrapper row1">
+  <div id="header" class="clear">
+    <div class="fl_left">
+      <h1><a href="#" style="width: 250px;height: 80px;display: inline-block;"><img src="images/logo.jpg" style="width: 100%;height: 100%"></a></h1>
+<!--       <p>Free CSS Website Template</p> -->
+    </div>
+    <div class="fl_right">
+      <!-- <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">A - Z Index</a></li>
+        <li><a href="#">Student Login</a></li>
+        <li class="last"><a href="#">Staff Login</a></li>
+      </ul> -->
+     <!--  <form action="#" method="post" id="sitesearch">
+        <fieldset>
+          <strong>搜索:</strong>
+          <input type="text" value="&hellip;" onfocus="this.value=(this.value=='&hellip;')? '' : this.value ;" />
+          <input type="image" src="images/search.png" id="search" alt="Search" />
+        </fieldset>
+      </form> -->
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper row2">
+  <div class="rnd">
+    <!-- ###### -->
+    <div id="topnav">
+      <ul>
+        <li class="nav_li">
+            <a href="javascript:void(0);">
+                <span>人才培养</span> 
+                <span class="down_img"></span>
+            </a>
+            <ul class="nav_sub_list">
+            	<li><a href="peiyangfangan.html"><span>培养方案</span></a></li>
+            	<li><a href="kechengjieshao.html"><span>课程介绍</span></a></li>
+            	<li><a href="jiangzhuxuejin.html"><span>奖助学金</span></a></li>
+              <li><a href="http://software.nju.edu.cn/index.php?option=com_content&view=article&id=6&Itemid=3" target="_blank"><span>师资介绍</span></a></li>
+            </ul>
+        </li>
+        <li class="nav_li">
+            <a href="javascript:void(0);">
+                <span>招生就业</span>
+                <span class="down_img"></span>
+            </a>
+            <ul class="nav_sub_list">
+            	<li><a href="yanjiusheng.html"><span>研究生招生</span></a></li>
+            	<li><a href="shixijidi.html"><span>实习基地</span></a></li>
+            	<li><a href="shixiguiding.html"><span>实习规定</span></a></li>
+            	<li><a href="jiuyeqingkuang.html"><span>就业情况</span></a></li>
+            </ul>
+        </li>
+        <li class="nav_li">
+            <a href="javascript:void(0);">
+              <span>学术信息</span>
+              <span class="down_img"></span>
+            </a>
+            <ul class="nav_sub_list">
+              <li><a href=""><span>学术动态</span></a></li>
+              <li><a href=""><span>公告信息</span></a></li>
+            </ul>
+        </li>
+        <li><a href="xiaoyuanwenhua.html"><span>校园文化</span></a></li>
+        <li><a href=""><span>校友风采</span></a></li>
+        <div style="clear: both"></div>
+      </ul>
+      <div id="navList"></div>
+    </div>
+    <!-- ###### -->
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<!-- add new at 2016.12.17 添加轮播图片-->
+<div class="wrapper">
+  <div id="featured_slide" class="clear">
+    <!-- ###### -->
+    <div class="overlay_left"></div>
+    <div id="featured_content">
+        <div id="carousel">
+			<input type="radio" name="carousel" checked>
+			<a href="#"><img src="images/1.jpg" alt="轮播图片" ></a>
+			<input type="radio" name="carousel" >
+			<a href="#"><img src="images/2.jpg" alt="轮播图片"></a>
+			<input type="radio" name="carousel">
+			<a href="#"><img src="images/3.jpg" alt="轮播图片"></a>
+			<input type="radio" name="carousel">
+			<a href="#"><img src="images/4.jpg" alt="轮播图片"></a>
+			<input type="radio" name="carousel">
+			<a href="#"><img src="images/5.jpg" alt="轮播图片"></a>
+	    </div>
+    </div>
+    <div class="overlay_right"></div>
+    <!-- ###### -->
+  </div>
+</div>
+<!--####################################################################################################### -->
+<div class="wrapper row3">
+<div class="rnd">
+    <div id="container" class="clear">
+      <!-- ####################################################################################################### -->
+        <div id="homepage" class="clear">
+        <!-- ###### -->
+	        <div id="left_column">
+	           <h2>学术动态</h2>
+	           <ul></ul>
+	        </div>
+       <!-- ###### -->
+       <!--  <div id="latestnews">
+	        <h2>焦点新闻</h2>
+	        <ul>
+	            <li class="clear">
+		            <div class="imgl"><img src="images/10.jpg" alt="" /></div>
+		            <div class="latestnews">
+		                <p><a href="#">海内外专家学者齐聚南大热议大数据背景下的人才测评</a></p>
+		                 <p>This is a W3C compliant free website template from <a href="http://sc.chinaz.com/" title="站长素材">网站模板</a>. This template is distributed using a <a href="#">Website Template Licence</a></p> 
+		            </div>
+	            </li>
+	            <li class="clear">
+	                <div class="imgl"><img src="images/11.jpg" alt="" /></div>
+	                <div class="latestnews">
+	                <p><a href="#">上海市委常委沙海林一行来我校考察</a></p>
+	                <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files.</p> 
+	               </div>
+	            </li>
+	            <li class="last clear">
+	               <div class="imgl"><img src="images/12.jpg" alt="" /></div>
+	               <div class="latestnews">
+	                <p><a href="#">《自然-通讯》刊登肖敏、姜校顺研究团队在片上光学隔离器方面的研究成果</a></p>
+	                <p>  <a href="#">《自然通讯》报道施勇教授首次发现化石星系中的一氧化碳气体金钟、刘杰课题组在锂硫电池正极材料方面取得新进展...</a></p>
+	              </div>
+	            </li>
+	        </ul>
+	        <p class="readmore"><a href="#">点击这里获取更多学院新闻</a></p>
+        </div> -->
+        <!-- ###### -->
+        <div id="right_column">
+            <h2>公告信息</h2>
+            <div class="new_list_div">
+            <ul class="news_list zdy-tj clearfix">
+                <li class="news n1 clearfix">
+                  <div class="sj">
+                    <div class="date-day"> 09 </div>
+                    <div class="date-month"> 2016-12 </div>
+                  </div>
+                  <div class="zdy-1">
+                    <div class="bt"> <a href="#" target="_blank" title="校领导鼓楼校区值班表（12月12日--12月16日） ">校领导鼓楼校区值班表（12月12日--12月16日） </a> </div>
+                  </div>
+                </li>
+                
+                <li class="news n2 clearfix">
+                  <div class="sj">
+                    <div class="date-day"> 08 </div>
+                    <div class="date-month"> 2016-12 </div>
+                  </div>
+                  <div class="zdy-1">
+                    <div class="bt"> <a href="#" target="_blank" title="南京大学本科招生宣传创意征集启事">南京大学本科招生宣传创意征集启事</a> </div>
+                  </div>
+                </li>
+                
+                <li class="news n3 clearfix">
+                  <div class="sj">
+                    <div class="date-day"> 08 </div>
+                    <div class="date-month"> 2016-12 </div>
+                  </div>
+                  <div class="zdy-1">
+                    <div class="bt"> <a href="#" target="_blank" title="校长办公室关于2016—2017学年第一学期期末教学工作的通知">校长办公室关于2016—2017学年第一学期期末教学工作的通知</a> </div>
+                  </div>
+                </li>
+                
+                <li class="news n4 clearfix">
+                  <div class="sj">
+                    <div class="date-day"> 02 </div>
+                    <div class="date-month"> 2016-12 </div>
+                  </div>
+                  <div class="zdy-1">
+                    <div class="bt"> <a href="#" target="_blank" title="校领导鼓楼校区值班表（12月5日--12月9日） ">校领导鼓楼校区值班表（12月5日--12月9日） </a> </div>
+                  </div>
+                </li>
+                
+            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!--####################################################################################################### -->
+<div class="wrapper row4">
+  <div class="rnd">
+    <div id="footer" class="clear">
+      <!-- ####################################################################################################### -->
+      <div>
+        <table>
+          <tbody>
+            <tr>
+              <td align="center" width="60">
+                <a href="http://www.nju.edu.cn/" target="_blank"><img align="middle" alt="" border="0" height="22" src="images/njdx1.jpg" width="66" /></a></td>
+              <td align="center" width="80">
+                <a href="http://labse.nju.edu.cn/" target="_blank"><img align="middle" alt="" border="0" height="20" src="images/rjgcsyjxzx3.jpg" width="112" /></a></td>
+              <td align="center" width="106">
+                <a href="http://218.94.159.105/" target="_blank"><img align="middle" alt="" height="20" src="images/logo10.png" width="104" /></a></td>
+              <td align="center" width="68">
+                <a href="http://mail.smail.nju.edu.cn/" target="_blank"><img align="middle" alt="" border="0" height="20" src="images/xsyx2.jpg" width="66" /></a></td>
+              <td align="center" width="68">
+                <a href="http://mail.nju.edu.cn/" target="_blank"><img align="middle" alt="" border="0" height="20" src="images/jsyx2.jpg" width="66" /></a></td>
+              <td align="center" width="96">
+                <a href="http://jw.nju.edu.cn/root/index.html" target="_blank"><img align="middle" alt="" height="20" src="images/link-jiaowu.jpg" width="94" /></a></td>
+              <td align="center" width="106">
+                <a href="http://grawww.nju.edu.cn/" target="_blank"><img align="middle" alt="" height="20" src="images/link-yjsy.jpg" width="104" /></a></td>
+              <td align="center" width="102">
+                <a href="http://job.nju.edu.cn/" target="_blank"><img align="middle" alt="" height="20" src="images/jiuyezhidao.GIF" width="100" /></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div align="center">
+        <p>
+       Copyright@南京大学软件学院 2002-2012</p>
+
+      </div>
+ 
+      <div class="fl_left clear">
+       <!--  <address>
+        Tel: xxxx xxxx xxxxxx<br />
+        Email: <a href="#">contact@domain.com</a>
+        </address> -->
+      </div>
+      <div class="fl_right">
+        <div id="social" class="clear">
+        </div>
+        <div id="newsletter">
+         <!--  <form action="#" method="post">
+            <fieldset>
+              <legend>Subscribe To Our Newsletter:</legend>
+              <input type="text" value="Enter Email Here&hellip;" onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
+              <input type="text" id="subscribe" value="Submit" />
+            </fieldset>
+          </form> -->
+        </div>
+      </div>
+      <!-- ####################################################################################################### -->
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<!-- <div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div> -->
+<script>
+    var pointer = document.querySelectorAll('input[type="radio"]');
+    var init;
+    window.onload = function() {
+        for(var i = 0;i<pointer.length;i++){
+            pointer[i].index = i;
+            //鼠标移动到input上面自动轮播暂停
+            pointer[i].onmouseover = function() {
+            fnStop();
+            };
+             //鼠标点击input切换图片
+            pointer[i].onclick = function() {
+                for(var l = 0;l<pointer.length;l++){
+                    pointer[l].checked = false;
+                }
+                this.checked = true;
+           };
+            //鼠标移出input自动轮播开始
+           pointer[i].onmouseout = function() {
+                fnStart();
+           };
+        }
+       //初始化自动轮播
+        fnStop();
+        fnStart();
+    };
+    //启动自动轮播
+    function fnStart() {
+        init = setInterval('fnAuto()',2500);
+    }
+    //停止自动轮播
+    function fnStop() {
+        window.clearInterval(init);
+    }
+      //自动轮播
+    function fnAuto() {
+        var aa =document.querySelector('input[type="radio"]:checked').index;
+        if(aa == 4) {
+            aa=-1;
+        }
+        aa+=1;
+        pointer[aa].checked = true;
+    }
+  
+</script>
+</body>
+</html>
