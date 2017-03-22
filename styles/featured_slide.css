@@ -55,7 +55,7 @@ Licence: <a href="#">Website Template Licence</a>
 	height:140px;
 	margin:0;
 	padding:30px;
-	background-image:url("../images/featured_slide_trans.png");
+	background-image:url("../images/css/featured_slide_trans.png");
 	overflow:hidden;
 	}
 
@@ -123,10 +123,10 @@ Licence: <a href="#">Website Template Licence</a>
 	left:0;
 	width:15px;
 	height:460px;
-/*	background-image:url("../images/featured_slide_left.png");*/
+/*	background-image:url("../images/css/featured_slide_left.png");*/
 	}
 
 #featured_slide .overlay_right{
 	left:945px;
-/*	background-image:url("../images/featured_slide_right.png");*/
+/*	background-image:url("../images/css/featured_slide_right.png");*/
 	}

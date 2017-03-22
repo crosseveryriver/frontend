@@ -11,7 +11,7 @@ Licence: <a href="#">Website Template Licence</a>
 	width:960px;
 	margin:0;
 	padding:0 0 12px 0;
-	/*background:url("../images/round_bot.gif") bottom left no-repeat;*/
+	/*background:url("../images/css/round_bot.gif") bottom left no-repeat;*/
 	text-align:center;
 	}
 
@@ -90,7 +90,7 @@ Licence: <a href="#">Website Template Licence</a>
 	margin:0;
 	padding:5px 10px 5px 20px;
 	color:#666666;
-	background:url("../images/blue_file.gif") no-repeat 10px center #F7F7F7;
+	background:url("../images/css/blue_file.gif") no-repeat 10px center #F7F7F7;
 	text-decoration:none;
 /*	border-bottom:1px dotted #666666;*/
 	}
@@ -109,7 +109,7 @@ Licence: <a href="#">Website Template Licence</a>
 	}
 
 #column .subnav ul ul a, #column .subnav ul ul ul a, #column .subnav ul ul ul ul a, #column .subnav ul ul ul ul ul a{
-	background:url("../images/black_file.gif") no-repeat #F7F7F7;
+	background:url("../images/css/black_file.gif") no-repeat #F7F7F7;
 	}
 
 #column .subnav ul ul a{
@@ -210,7 +210,7 @@ Licence: <a href="#">Website Template Licence</a>
     width:100%;
 }
 .down_img{
-	background-image: url(../images/down_triangle_1.png);
+	background-image: url(../images/css/down_triangle_1.png);
 	background-size: 18px 18px;
 	background-repeat: no-repeat;
 	width: 18px;

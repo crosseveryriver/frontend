@@ -11,6 +11,7 @@
 <script type="text/javascript" src="scripts/jquery.tabs.setup.js"></script>
 <script type="text/javascript" src="scripts/slideDown.js"></script>
 <!-- End Homepage Specific Elements -->
+
 <style>
 /*carousel.css*/
 	#carousel {
@@ -182,36 +183,25 @@
 </style>
 
 </head>
+
 <body id="top">
 <div class="wrapper row1">
-  <div id="header" class="clear">
-    <div class="fl_left">
-      <h1><a href="#" style="width: 250px;height: 80px;display: inline-block;"><img src="images/logo.jpg" style="width: 100%;height: 100%"></a></h1>
-<!--       <p>Free CSS Website Template</p> -->
-    </div>
-    <div class="fl_right">
-      <!-- <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">A - Z Index</a></li>
-        <li><a href="#">Student Login</a></li>
-        <li class="last"><a href="#">Staff Login</a></li>
-      </ul> -->
-     <!--  <form action="#" method="post" id="sitesearch">
-        <fieldset>
-          <strong>搜索:</strong>
-          <input type="text" value="&hellip;" onfocus="this.value=(this.value=='&hellip;')? '' : this.value ;" />
-          <input type="image" src="images/search.png" id="search" alt="Search" />
-        </fieldset>
-      </form> -->
-    </div>
-  </div>
+	<div id="header" class="clear">
+	
+		<div class="fl_left">
+			<h1><a href="#" style="width: 550px;height: 80px;display: inline-block;"><img src="images/logo.jpg" style="width: 100%;height: 100%"/></a></h1>
+		</div>
+		
+		<div class="fl_right">
+		</div>
+	</div>
 </div>
+
 <!-- ####################################################################################################### -->
 <div class="wrapper row2">
-  <div class="rnd">
-    <!-- ###### -->
-    <div id="topnav">
+<div class="rnd">
+	<!-- 标签栏 -->
+	<div id="topnav">
       <ul>
         <li class="nav_li">
             <a href="javascript:void(0);">
@@ -222,7 +212,7 @@
             	<li><a href="peiyangfangan.html"><span>培养方案</span></a></li>
             	<li><a href="kechengjieshao.html"><span>课程介绍</span></a></li>
             	<li><a href="jiangzhuxuejin.html"><span>奖助学金</span></a></li>
-              <li><a href="http://software.nju.edu.cn/index.php?option=com_content&view=article&id=6&Itemid=3" target="_blank"><span>师资介绍</span></a></li>
+            	<li><a href="shizijieshao.html"><span>师资介绍</span></a></li>
             </ul>
         </li>
         <li class="nav_li">
@@ -248,173 +238,168 @@
             </ul>
         </li>
         <li><a href="xiaoyuanwenhua.html"><span>校园文化</span></a></li>
-        <li><a href="xiaoyoufengcai.html"><span>校友风采</span></a></li>
+        <li class="nav_li">
+        	<a href="javascript:void(0);">
+        		<span>校友风采</span>
+        		<span class="down_img"></span>
+        	</a>
+        	<ul class="nav_sub_list">
+        		<li><a href="xiaoyoufengcai.html"><span>校友风采</span></a></li>
+        		<li><a href="biyejinian.html"><span>毕业纪念</span></a></li>
+        	</ul>
+        </li>
         <div style="clear: both"></div>
       </ul>
       <div id="navList"></div>
-    </div>
-    <!-- ###### -->
-  </div>
+    </div><!-- /.标签栏 -->
 </div>
+</div>
+
 <!-- ####################################################################################################### -->
-<!-- add new at 2016.12.17 添加轮播图片-->
+<!-- 添加轮播图片 -->
 <div class="wrapper">
-  <div id="featured_slide" class="clear">
-    <!-- ###### -->
-    <div class="overlay_left"></div>
-    <div id="featured_content">
-        <div id="carousel">
+<div id="featured_slide" class="clear">
+	<!-- ###### -->
+	<div class="overlay_left"></div>
+	<div id="featured_content">
+		<div id="carousel">
 			<input type="radio" name="carousel" checked>
-			<a href="#"><img src="images/1.jpg" alt="轮播图片" ></a>
+			<a href="#"><img src="images/ca/1.jpg" alt="轮播图片"></a>
 			<input type="radio" name="carousel" >
-			<a href="#"><img src="images/2.jpg" alt="轮播图片"></a>
+			<a href="#"><img src="images/ca/2.jpg" alt="轮播图片"></a>
 			<input type="radio" name="carousel">
-			<a href="#"><img src="images/3.jpg" alt="轮播图片"></a>
+			<a href="#"><img src="images/ca/3.jpg" alt="轮播图片"></a>
 			<input type="radio" name="carousel">
-			<a href="#"><img src="images/4.jpg" alt="轮播图片"></a>
+			<a href="#"><img src="images/ca/4.jpg" alt="轮播图片"></a>
 			<input type="radio" name="carousel">
-			<a href="#"><img src="images/5.jpg" alt="轮播图片"></a>
-	    </div>
-    </div>
-    <div class="overlay_right"></div>
-    <!-- ###### -->
-  </div>
+			<a href="#"><img src="images/ca/5.jpg" alt="轮播图片"></a>
+		</div>
+	</div>
+	<div class="overlay_right"></div>
+	<!-- ###### -->
 </div>
+</div>
+
 <!--####################################################################################################### -->
 <div class="wrapper row3">
 <div class="rnd">
-    <div id="container" class="clear">
-      <!-- ####################################################################################################### -->
-        <div id="homepage" class="clear">
-        <!-- ###### -->
-        <div id="left_column">
-        	<h2>学术动态</h2>
-        	<table>
-            <tbody>
-            	<tr>
-            		<td><a href="#">H. Zhang:On the Communication Variability Analysis of the NeCTAR Research Cloud System</a></td>
-            		<td>2016-01-12</td>
-            	</tr>
-            	<tr>
-            		<td><a href="#">H. Zhang:Spot Pricing in the Cloud Ecosystem: A Comparative Investigation</a></td>
-            		<td>2016-01-19</td>
-            	</tr>
-            </tbody>
-          </table>
-	        </div>
-        <!-- ###### -->
-        <div id="right_column">
-            <h2>公告信息</h2>
-            <div class="new_list_div">
-            <ul class="news_list zdy-tj clearfix">
-                <li class="news n1 clearfix">
-                  <div class="sj">
-                    <div class="date-day"> 09 </div>
-                    <div class="date-month"> 2016-12 </div>
-                  </div>
-                  <div class="zdy-1">
-                    <div class="bt"> <a href="gonggaoxiangqing.html" target="_blank" title="校领导鼓楼校区值班表（12月12日--12月16日） ">校领导鼓楼校区值班表（12月12日--12月16日） </a> </div>
-                  </div>
-                </li>
-                
-                <li class="news n2 clearfix">
-                  <div class="sj">
-                    <div class="date-day"> 08 </div>
-                    <div class="date-month"> 2016-12 </div>
-                  </div>
-                  <div class="zdy-1">
-                    <div class="bt"> <a href="#" target="_blank" title="南京大学本科招生宣传创意征集启事">南京大学本科招生宣传创意征集启事</a> </div>
-                  </div>
-                </li>
-                
-                <li class="news n3 clearfix">
-                  <div class="sj">
-                    <div class="date-day"> 08 </div>
-                    <div class="date-month"> 2016-12 </div>
-                  </div>
-                  <div class="zdy-1">
-                    <div class="bt"> <a href="#" target="_blank" title="校长办公室关于2016—2017学年第一学期期末教学工作的通知">校长办公室关于2016—2017学年第一学期期末教学工作的通知</a> </div>
-                  </div>
-                </li>
-                
-                <li class="news n4 clearfix">
-                  <div class="sj">
-                    <div class="date-day"> 02 </div>
-                    <div class="date-month"> 2016-12 </div>
-                  </div>
-                  <div class="zdy-1">
-                    <div class="bt"> <a href="#" target="_blank" title="校领导鼓楼校区值班表（12月5日--12月9日） ">校领导鼓楼校区值班表（12月5日--12月9日） </a> </div>
-                  </div>
-                </li>
-                
-            </ul>
-            </div>
-        </div>
-    </div>
+<div id="container" class="clear">
+	<!-- 主页概要信息 -->
+	<div id="homepage" class="clear">
+		<!-- 学术动态 -->
+		<div id="left_column">
+			<h2>学术动态</h2>
+			<p><a href="http://ieeexplore.ieee.org/document/7460190/?tp=&arnumber=7460190" target="_Blank">
+				<strong>H. Zhang:</strong>On the Communication Variability Analysis of the NeCTAR Research Cloud System</a></p>
+			<p><a href="http://www.sciencedirect.com/science/article/pii/S0164121215002332" target="_Blank">
+				<strong>H. Zhang:</strong>Spot Pricing in the Cloud Ecosystem: A Comparative Investigation</a></p>
+			<p><a href="http://ieeexplore.ieee.org/document/6575076/?tp=&arnumber=6575076" target="_Blank">
+				<strong>H. Zhang:</strong>On the Conceptualization of Performance Evaluation of IaaS Services</a></p>
+			<p><a href="http://onlinelibrary.wiley.com/doi/10.1002/smr.1694/abstract" target="_Blank">
+				<strong>H. Zhang:</strong>Software Process Simulation – At a Crossroads</a></p>
+			<p><a href="http://onlinelibrary.wiley.com/doi/10.1002/smr.1694/abstract" target="_Blank">
+				<strong>Zhenyu Chen:</strong>Guiding the Crowds for Android Testing</a></p>
+		</div><!-- /.学术动态 -->
+		
+		<!-- 公告信息 -->
+		<div id="right_column">
+			<h2>公告信息</h2>
+			<div class="new_list_div">
+			<ul class="news_list zdy-tj clearfix">
+				<li class="news n1 clearfix">
+					<div class="sj">
+						<div class="date-day"> 09 </div>
+						<div class="date-month"> 2016-12 </div>
+					</div>
+					<div class="zdy-1">
+						<div class="bt"><a href="gonggaoxiangqing.html" target="_blank" title="校领导鼓楼校区值班表（12月12日--12月16日） ">校领导鼓楼校区值班表（12月12日--12月16日） </a></div>
+					</div>
+				</li>
+				
+				<li class="news n2 clearfix">
+					<div class="sj">
+						<div class="date-day"> 08 </div>
+						<div class="date-month"> 2016-12 </div>
+					</div>
+					<div class="zdy-1">
+						<div class="bt"> <a href="#" target="_blank" title="南京大学本科招生宣传创意征集启事">南京大学本科招生宣传创意征集启事</a> </div>
+					</div>
+				</li>
+				
+				<li class="news n3 clearfix">
+					<div class="sj">
+						<div class="date-day"> 08 </div>
+						<div class="date-month"> 2016-12 </div>
+					</div>
+					<div class="zdy-1">
+						<div class="bt"> <a href="#" target="_blank" title="校长办公室关于2016—2017学年第一学期期末教学工作的通知">校长办公室关于2016—2017学年第一学期期末教学工作的通知</a> </div>
+					</div>
+				</li>
+				
+				<li class="news n4 clearfix">
+					<div class="sj">
+						<div class="date-day"> 02 </div>
+						<div class="date-month"> 2016-12 </div>
+					</div>
+					<div class="zdy-1">
+						<div class="bt"> <a href="#" target="_blank" title="校领导鼓楼校区值班表（12月5日--12月9日） ">校领导鼓楼校区值班表（12月5日--12月9日） </a> </div>
+					</div>
+				</li>
+			</ul>
+			</div>
+		</div><!-- /.公告信息 -->
+	</div>
 </div>
 </div>
 </div>
+
 <!--####################################################################################################### -->
 <div class="wrapper row4">
-  <div class="rnd">
-    <div id="footer" class="clear">
-      <!-- ####################################################################################################### -->
-      <div>
-        <table>
-          <tbody>
-            <tr>
-              <td align="center" width="60">
-                <a href="http://www.nju.edu.cn/" target="_blank"><img align="middle" alt="" border="0" height="22" src="images/njdx1.jpg" width="66" /></a></td>
-              <td align="center" width="80">
-                <a href="http://labse.nju.edu.cn/" target="_blank"><img align="middle" alt="" border="0" height="20" src="images/rjgcsyjxzx3.jpg" width="112" /></a></td>
-              <td align="center" width="106">
-                <a href="http://218.94.159.105/" target="_blank"><img align="middle" alt="" height="20" src="images/logo10.png" width="104" /></a></td>
-              <td align="center" width="68">
-                <a href="http://mail.smail.nju.edu.cn/" target="_blank"><img align="middle" alt="" border="0" height="20" src="images/xsyx2.jpg" width="66" /></a></td>
-              <td align="center" width="68">
-                <a href="http://mail.nju.edu.cn/" target="_blank"><img align="middle" alt="" border="0" height="20" src="images/jsyx2.jpg" width="66" /></a></td>
-              <td align="center" width="96">
-                <a href="http://jw.nju.edu.cn/root/index.html" target="_blank"><img align="middle" alt="" height="20" src="images/link-jiaowu.jpg" width="94" /></a></td>
-              <td align="center" width="106">
-                <a href="http://grawww.nju.edu.cn/" target="_blank"><img align="middle" alt="" height="20" src="images/link-yjsy.jpg" width="104" /></a></td>
-              <td align="center" width="102">
-                <a href="http://job.nju.edu.cn/" target="_blank"><img align="middle" alt="" height="20" src="images/jiuyezhidao.GIF" width="100" /></a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div align="center">
-        <p>
-       Copyright@南京大学软件学院 2002-2017</p>
-
-      </div>
- 
-      <div class="fl_left clear">
-       <!--  <address>
-        Tel: xxxx xxxx xxxxxx<br />
-        Email: <a href="#">contact@domain.com</a>
-        </address> -->
-      </div>
-      <div class="fl_right">
-        <div id="social" class="clear">
-        </div>
-        <div id="newsletter">
-         <!--  <form action="#" method="post">
-            <fieldset>
-              <legend>Subscribe To Our Newsletter:</legend>
-              <input type="text" value="Enter Email Here&hellip;" onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
-              <input type="text" id="subscribe" value="Submit" />
-            </fieldset>
-          </form> -->
-        </div>
-      </div>
-      <!-- ####################################################################################################### -->
+	<div class="rnd">
+	<div id="footer" class="clear">
+	<div>
+		<table>
+		<tbody>
+			<tr>
+				<td align="center" width="60">
+					<a href="http://www.nju.edu.cn/" target="_blank"><img align="middle" alt="" border="0" height="22" src="images/link/njdx.jpg" width="66" /></a></td>
+				<td align="center" width="80">
+					<a href="http://labse.nju.edu.cn/" target="_blank"><img align="middle" alt="" border="0" height="20" src="images/link/rjgcsyjxzx.jpg" width="112" /></a></td>
+				<td align="center" width="106">
+					<a href="http://218.94.159.105/" target="_blank"><img align="middle" alt="" height="20" src="images/link/ryszn.png" width="104" /></a></td>
+				<td align="center" width="68">
+					<a href="http://mail.smail.nju.edu.cn/" target="_blank"><img align="middle" alt="" border="0" height="20" src="images/link/xsyx.jpg" width="66" /></a></td>
+				<td align="center" width="68">
+					<a href="http://mail.nju.edu.cn/" target="_blank"><img align="middle" alt="" border="0" height="20" src="images/link/jsyx.jpg" width="66" /></a></td>
+				<td align="center" width="96">
+					<a href="http://jw.nju.edu.cn/root/index.html" target="_blank"><img align="middle" alt="" height="20" src="images/link/jiaowuchu.jpg" width="94" /></a></td>
+				<td align="center" width="106">
+					<a href="http://grawww.nju.edu.cn/" target="_blank"><img align="middle" alt="" height="20" src="images/link/yjsy.jpg" width="104" /></a></td>
+				<td align="center" width="102">
+					<a href="http://job.nju.edu.cn/" target="_blank"><img align="middle" alt="" height="20" src="images/link/jiuyezhidao.GIF" width="100" /></a></td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	
+	<div align="center">
+		<p>Copyright@南京大学软件学院 2002-2017</p>
+	</div>
+	
+	<div class="fl_left clear">
+	</div>
+	
+	<div class="fl_right">
+		<div id="social" class="clear"></div>
+		<div id="newsletter"></div>
+	</div>
+	
+    </div><!-- /.footer -->
     </div>
-  </div>
 </div>
 <!-- ####################################################################################################### -->
-<!-- <div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div> -->
+
+
 <script>
     var pointer = document.querySelectorAll('input[type="radio"]');
     var init;
